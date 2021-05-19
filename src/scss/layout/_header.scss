@@ -1,0 +1,66 @@
+@use 'abstracts' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    width: 20%;
+  }
+
+  &__user {
+    width: 20%;
+  }
+
+  .logo {
+    height: 3.4rem;
+    width: 14.5rem;
+  }
+
+  &__form {
+    margin: 0 3rem;
+    width: 60%;
+  }
+
+  .search {
+    color: $color-text;
+    font-size: $font-size-default;
+    height: 5.6rem;
+    width: 100%;
+
+    padding: 2rem;
+    background: $color-input-bg;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus {
+      background: $color-input-bg-hover;
+    }
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+    margin-left: auto;
+    max-width: 14.5rem;
+
+    &-name {
+      color: $color-text;
+      font-size: $font-size-default;
+      font-weight: lighter;
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      background: rgba(#fff, 0.08);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use 'abstracts' as *;
+
+.input {
+  color: $color-text;
+  font-size: $font-size-default;
+  font-family: $font-family;
+  height: 5.6rem;
+  width: 100%;
+
+  padding: 1.5rem;
+  background: $color-input-bg;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background: $color-input-bg-hover;
+  }
+}

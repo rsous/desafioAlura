@@ -1,0 +1,56 @@
+@use 'abstracts' as *;
+
+//FIXME
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+
+  & > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &-name {
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover &-name {
+      opacity: 0.8;
+    }
+
+    &:hover .menu__icon {
+      background: rgba($color-tertiary, 0.64);
+    }
+  }
+
+  &__icon {
+    background: $color-tertiary;
+    border-radius: 1.6rem;
+    margin-right: 1rem;
+    padding: 1.2rem;
+
+    &.comunidade {
+      opacity: 0.16;
+    }
+  }
+}

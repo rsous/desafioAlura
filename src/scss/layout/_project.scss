@@ -1,0 +1,78 @@
+@use 'abstracts' as *;
+
+.project {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+
+  &__info {
+    margin-bottom: 4rem;
+  }
+
+  &__info > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__info,
+  &__settings {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info h3,
+  &__settings h3 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+  }
+
+  &__select {
+    background: $color-input-bg;
+    border: none;
+    border-radius: 8px;
+    color: $color-text;
+    font-size: $font-size-default;
+    font-family: $font-family;
+    height: 5.6rem;
+    outline: none;
+    padding: 1rem;
+  }
+
+  &__option {
+    background-color: rgba($color-primary, 0.8);
+    border: none;
+    border-radius: 8px;
+    color: $color-text;
+    outline: none;
+    padding: 1rem;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+
+  &__settings {
+    & > *:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__description {
+    height: 100%;
+    resize: none;
+  }
+
+  &__color-picker {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    height: 5.6rem;
+    padding: 0.3rem 0.4rem;
+    width: 100%;
+  }
+
+  &__btn {
+    background-color: $color-tertiary;
+    color: $color-primary;
+  }
+}

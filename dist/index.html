@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Dev</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.77bb5cfd.css">
+  <script src="/main.77bb5cfd.js"></script></head>
+  <body class="body container">
+    <header class="header">
+      <div class="header__logo">
+        <a href="#">
+          <img src="/Logo@3x.e71c0d52.png" alt="logo" class="logo">
+        </a>
+      </div>
+      <form class="header__form">
+        <input type="text" class="input search" placeholder="Busque por algo">
+      </form>
+      <div class="header__user">
+        <div class="user">
+          <img src="/user.51f6508b.png" alt="user-photo" class="user-photo">
+          <h3 class="user-name">Harry</h3>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <div class="menu">
+        <h3 class="menu__title title">Menu</h3>
+        <div class="menu__item">
+          <div class="menu__icon">
+            <img src="/code-icon.6283e1d0.svg" alt="icone código">
+          </div>
+          <p class="menu__item-name">Editor de código</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__icon comunidade">
+            <img src="/group-icon.ea7edb11.svg" alt="icone código">
+          </div>
+          <p class="menu__item-name">Comunidade</p>
+        </div>
+      </div>
+      <div class="editor">
+        <div class="editor__container">
+          <textarea name="editor" id="editor" cols="30" rows="15" class="editor__code">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+          
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}</textarea>
+          <img src="/mac_buttons.b04ec11f.svg" alt="botões" class="editor__buttons">
+        </div>
+        <button class="btn" type="button">Visualizar com o highlight</button>
+      </div>
+      <div class="project">
+        <div class="project__info">
+          <h3 class="title">Seu projeto</h3>
+          <input class="input project__name" type="text" name="nome" id="nome" placeholder="Nome do seu projeto">
+          <textarea class="input project__description" name="descricao" id="descricao" cols="" rows="3" spellcheck="false" placeholder="Descrição do seu projeto"></textarea>
+        </div>
+        <div class="project__settings">
+          <h3 class="title">Personalização</h3>
+          <select class="project__select" name="lingua" id="lingua">
+            <option class="project__option" value="javascript">
+              Javascript
+            </option>
+            <option class="project__option" value="css">CSS</option>
+            <option class="project__option" value="html">HTML</option>
+          </select>
+          <input class="project__color-picker" type="color" name="cor" id="cor" value="#6bd1ff">
+          <button type="button" class="btn project__btn">Salvar projeto</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
