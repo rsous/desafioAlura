@@ -3,8 +3,13 @@ $color-primary: #051d3b;
 $color-secondary: #6bd1ff;
 $color-tertiary: #5081fb;
 $color-text: #fff;
+$color-text-greyish: rgba(255, 255, 255, 0.64);
 $color-input-bg: rgba(255, 255, 255, 0.16);
 $color-input-bg-hover: rgba(255, 255, 255, 0.24);
+
+$color-btn-light-hover: #7ba4fc;
+$border-btn-light-pressed: 4px solid rgba(80, 129, 251, 0.72);
+$border-btn-dark-pressed: 4px solid rgba(80, 129, 251, 0.24);
 
 $font-size-default: 1.6rem;
 $font-family: 'Inter', sans-serif;

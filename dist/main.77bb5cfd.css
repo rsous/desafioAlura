@@ -29,16 +29,32 @@ html {
   padding: 2rem 2rem;
   background: rgba(80, 129, 251, 0.08);
   border-radius: 0.8rem;
-  border: none;
+  border: 4px solid transparent;
   transition: all 0.2s ease;
 }
-.btn:hover {
+
+.btn-dark:hover {
   background: rgba(80, 129, 251, 0.16);
   cursor: pointer;
 }
+.btn-dark:active {
+  border: 4px solid rgba(80, 129, 251, 0.24);
+}
+
+.btn-light {
+  background-color: #5081fb;
+  color: #051d3b;
+  cursor: pointer;
+}
+.btn-light:hover {
+  background: #7ba4fc;
+}
+.btn-light:active {
+  border: 4px solid rgba(80, 129, 251, 0.72);
+}
 
 .input {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.64);
   font-size: 1.6rem;
   font-family: "Inter", sans-serif;
   height: 5.6rem;
@@ -49,6 +65,9 @@ html {
   border: none;
   outline: none;
   transition: all 0.2s ease;
+}
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.64);
 }
 .input:hover, .input:focus {
   background: rgba(255, 255, 255, 0.24);
@@ -137,6 +156,7 @@ html {
 }
 .menu__item-name {
   font-size: 1.6rem;
+  opacity: 0.56;
 }
 .menu__item:hover {
   cursor: pointer;
@@ -152,9 +172,11 @@ html {
   border-radius: 1.6rem;
   margin-right: 1rem;
   padding: 1.2rem;
-}
-.menu__icon.comunidade {
   opacity: 0.16;
+}
+
+.active > * {
+  opacity: 1;
 }
 
 .editor {
@@ -172,17 +194,31 @@ html {
 }
 .editor__code {
   background-color: #000;
-  border: none;
+  border-top: 4rem solid #000;
   border-radius: 8px;
   color: #fff;
   font-size: 1.4rem;
   font-family: "Roboto mono", monospace;
-  padding: 5rem 2rem 2rem;
+  padding: 0 2rem 2rem;
   resize: none;
   width: 100%;
 }
 .editor__code:focus {
   outline: none;
+}
+.editor__code::-webkit-scrollbar {
+  width: 10px;
+}
+.editor__code::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+}
+.editor__code::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.editor__code::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 .editor__buttons {
   position: absolute;
@@ -217,12 +253,15 @@ html {
   background: rgba(255, 255, 255, 0.16);
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.64);
   font-size: 1.6rem;
   font-family: "Inter", sans-serif;
   height: 5.6rem;
   outline: none;
   padding: 1rem;
+}
+.project__select:hover {
+  background: rgba(255, 255, 255, 0.24);
 }
 .project__option {
   background-color: rgba(5, 29, 59, 0.8);
@@ -250,12 +289,8 @@ html {
   padding: 0.3rem 0.4rem;
   width: 100%;
 }
-.project__btn {
-  background-color: #5081fb;
-  color: #051d3b;
-}
-.project__btn:hover {
-  color: #fff;
+.project__color-picker::-webkit-color-swatch {
+  border-radius: 4px;
 }
 
 .body {

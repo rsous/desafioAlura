@@ -7,11 +7,31 @@
   padding: 2rem 2rem;
   background: rgba($color-tertiary, 0.08);
   border-radius: 0.8rem;
-  border: none;
+  border: 4px solid transparent;
   transition: all 0.2s ease;
+}
 
+.btn-dark {
   &:hover {
     background: rgba($color-tertiary, 0.16);
     cursor: pointer;
+  }
+
+  &:active {
+    border: $border-btn-dark-pressed;
+  }
+}
+
+.btn-light {
+  background-color: $color-tertiary;
+  color: $color-primary;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-btn-light-hover;
+  }
+
+  &:active {
+    border: $border-btn-light-pressed;
   }
 }

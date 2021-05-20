@@ -16,17 +16,35 @@
 
   &__code {
     background-color: #000;
-    border: none;
+    border-top: 4rem solid #000;
     border-radius: 8px;
     color: $color-text;
     font-size: $font-size-code;
     font-family: $font-family-code;
-    padding: 5rem 2rem 2rem;
+    padding: 0 2rem 2rem;
     resize: none;
     width: 100%;
 
     &:focus {
       outline: none;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.1);
     }
   }
 

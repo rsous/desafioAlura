@@ -30,12 +30,16 @@
     background: $color-input-bg;
     border: none;
     border-radius: 8px;
-    color: $color-text;
+    color: $color-text-greyish;
     font-size: $font-size-default;
     font-family: $font-family;
     height: 5.6rem;
     outline: none;
     padding: 1rem;
+
+    &:hover {
+      background: $color-input-bg-hover;
+    }
   }
 
   &__option {
@@ -69,14 +73,9 @@
     height: 5.6rem;
     padding: 0.3rem 0.4rem;
     width: 100%;
-  }
 
-  &__btn {
-    background-color: $color-tertiary;
-    color: $color-primary;
-
-    &:hover {
-      color: $color-text;
+    &::-webkit-color-swatch {
+      border-radius: 4px;
     }
   }
 }
