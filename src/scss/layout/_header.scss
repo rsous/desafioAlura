@@ -63,4 +63,46 @@
       cursor: pointer;
     }
   }
+
+  &__burger {
+    display: flex;
+    height: 5.6rem;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+  }
+}
+
+.burger {
+  background: #fff;
+  height: 3px;
+  position: relative;
+  width: 2rem;
+
+  &::before,
+  &::after {
+    content: '';
+    background: #fff;
+    height: 3px;
+    position: absolute;
+    width: 2rem;
+  }
+
+  &::before {
+    top: -7px;
+    right: 0;
+  }
+
+  &::after {
+    top: 7px;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: $bp-tablet) {
+  .header {
+    &__user {
+      display: none;
+    }
+  }
 }

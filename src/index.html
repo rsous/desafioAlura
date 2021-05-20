@@ -28,6 +28,9 @@
           <h3 class="user-name">Harry</h3>
         </div>
       </div>
+      <div class="header__burger">
+        <div class="burger"></div>
+      </div>
     </header>
     <main class="content">
       <div class="menu">
@@ -94,20 +97,22 @@ const unfold = (f, seed) => {
         </div>
         <div class="project__settings">
           <h3 class="title">Personalização</h3>
-          <select class="project__select" name="lingua" id="lingua">
-            <option class="project__option" value="javascript">
-              Javascript
-            </option>
-            <option class="project__option" value="css">CSS</option>
-            <option class="project__option" value="html">HTML</option>
-          </select>
-          <input
-            class="project__color-picker"
-            type="color"
-            name="cor"
-            id="cor"
-            value="#6bd1ff"
-          />
+          <div class="project__customize">
+            <select class="project__select" name="lingua" id="lingua">
+              <option class="project__option" value="javascript">
+                Javascript
+              </option>
+              <option class="project__option" value="css">CSS</option>
+              <option class="project__option" value="html">HTML</option>
+            </select>
+            <input
+              class="project__color-picker"
+              type="color"
+              name="cor"
+              id="cor"
+              value="#6bd1ff"
+            />
+          </div>
           <button type="button" class="btn btn-light">Salvar projeto</button>
         </div>
       </div>

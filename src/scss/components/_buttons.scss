@@ -4,10 +4,11 @@
   color: $color-text;
   font-size: $font-size-default;
   font-family: $font-family;
-  padding: 2rem 2rem;
+  // padding: 2rem 2rem;
   background: rgba($color-tertiary, 0.08);
   border-radius: 0.8rem;
   border: 4px solid transparent;
+  height: 5.6rem;
   transition: all 0.2s ease;
 }
 

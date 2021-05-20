@@ -1,3 +1,5 @@
+@use 'abstracts' as *;
+
 *,
 *::before,
 *::after {
@@ -15,4 +17,10 @@ html {
   padding: 2rem;
   max-width: 140rem;
   margin: auto;
+}
+
+@media only screen and (max-width: $bp-tablet) {
+  .container {
+    padding: 3rem;
+  }
 }

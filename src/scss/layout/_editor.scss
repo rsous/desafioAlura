@@ -15,8 +15,8 @@
   }
 
   &__code {
-    background-color: #000;
-    border-top: 4rem solid #000;
+    background-color: #141414;
+    border-top: 4rem solid #141414;
     border-radius: 8px;
     color: $color-text;
     font-size: $font-size-code;
@@ -56,5 +56,12 @@
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+@media only screen and (max-width: $bp-tablet) {
+  .editor {
+    margin: 0;
+    width: 100%;
   }
 }
