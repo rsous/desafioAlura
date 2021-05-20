@@ -74,5 +74,9 @@
   &__btn {
     background-color: $color-tertiary;
     color: $color-primary;
+
+    &:hover {
+      color: $color-text;
+    }
   }
 }

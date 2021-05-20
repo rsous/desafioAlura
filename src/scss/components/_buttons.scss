@@ -8,6 +8,7 @@
   background: rgba($color-tertiary, 0.08);
   border-radius: 0.8rem;
   border: none;
+  transition: all 0.2s ease;
 
   &:hover {
     background: rgba($color-tertiary, 0.16);

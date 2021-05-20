@@ -30,6 +30,7 @@ html {
   background: rgba(80, 129, 251, 0.08);
   border-radius: 0.8rem;
   border: none;
+  transition: all 0.2s ease;
 }
 .btn:hover {
   background: rgba(80, 129, 251, 0.16);
@@ -252,6 +253,9 @@ html {
 .project__btn {
   background-color: #5081fb;
   color: #051d3b;
+}
+.project__btn:hover {
+  color: #fff;
 }
 
 .body {
