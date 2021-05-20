@@ -97,11 +97,37 @@
     &__customize {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
+
+      & > *:first-child {
+        margin-bottom: 0;
+      }
     }
 
     &__select,
     &__color-picker {
       width: calc((100% / 2) - 1%);
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-mobile) {
+  .project {
+    &__customize {
+      flex-direction: column;
+
+      & > *:first-child {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &__settings .project__customize {
+      margin-bottom: 3.5rem;
+    }
+
+    &__select,
+    &__color-picker {
+      width: 100%;
     }
   }
 }

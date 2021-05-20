@@ -42,6 +42,10 @@
     }
   }
 
+  &__search-responsive {
+    display: none;
+  }
+
   .user {
     display: flex;
     align-items: center;
@@ -65,11 +69,19 @@
   }
 
   &__burger {
-    display: flex;
-    height: 5.6rem;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 10%;
+
+    &-icon {
+      padding: 1.5rem;
+
+      &:active {
+        background: $color-icon-btn-pressed;
+        border-radius: 16px;
+      }
+    }
   }
 }
 
@@ -103,6 +115,33 @@
   .header {
     &__user {
       display: none;
+    }
+
+    .logo {
+      width: 100%;
+    }
+
+    &__burger {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-mobile) {
+  .header {
+    &__form {
+      display: none;
+    }
+
+    .logo {
+      width: 14.2rem;
+    }
+
+    &__search-responsive {
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+      width: 60%;
     }
   }
 }
