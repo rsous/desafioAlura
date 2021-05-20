@@ -124,6 +124,13 @@ html {
 .header__search-responsive {
   display: none;
 }
+.header__search-icon {
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.header__search-icon:active {
+  background: rgba(80, 129, 251, 0.16);
+}
 .header .user {
   display: flex;
   align-items: center;
@@ -201,7 +208,7 @@ html {
     display: flex;
     justify-content: flex-end;
     height: 100%;
-    width: 60%;
+    width: 65%;
   }
 }
 .menu {
