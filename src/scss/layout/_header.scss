@@ -21,6 +21,10 @@
   &__form {
     margin: 0 3rem;
     width: 60%;
+
+    &-small {
+      display: none;
+    }
   }
 
   .search {
@@ -61,7 +65,7 @@
     justify-content: flex-end;
     padding: 1rem 2rem;
     margin-left: auto;
-    max-width: 14.5rem;
+    max-width: 12.5rem;
 
     &-name {
       color: $color-text;
@@ -86,12 +90,18 @@
     &-icon {
       padding: 1.5rem;
 
-      &:active {
+      &:active,
+      &:focus {
         background: $color-icon-btn-pressed;
         border-radius: 16px;
       }
     }
   }
+}
+
+.bg-pressed {
+  background: $color-icon-btn-pressed;
+  border-radius: 16px;
 }
 
 .burger {
@@ -142,6 +152,12 @@
       display: none;
     }
 
+    &__form-small {
+      display: none;
+      margin: 0 0 3rem;
+      width: 100%;
+    }
+
     .logo {
       width: 14.2rem;
     }
@@ -152,5 +168,11 @@
       height: 100%;
       width: 65%;
     }
+  }
+
+  .show-search-bar {
+    display: block;
+    opacity: 1;
+    animation: menuIn 0.8s ease-in-out;
   }
 }

@@ -117,79 +117,64 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"js/main.js":[function(require,module,exports) {
+var button = document.querySelector('#button');
+var select = document.querySelector('#dropdown');
+var options = document.querySelectorAll('.project__radio-option');
+var selectLabel = document.querySelector('#select-label');
+button.addEventListener('click', function (e) {
+  e.preventDefault();
+  toggleHidden();
+  console.log('button clicked');
+});
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
+function toggleHidden() {
+  select.classList.toggle('hidden');
 }
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+options.forEach(function (option) {
+  option.addEventListener('click', function (e) {
+    setSelectTitle(e);
+  });
+});
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
+function setSelectTitle(e) {
+  var labelElement = document.querySelector("label[for=\"".concat(e.target.id, "\"]")).textContent;
+  selectLabel.innerHTML = labelElement;
+  toggleHidden();
+}
+/* Handling the menu on small devices */
 
-  return '/';
+
+var menu = document.querySelector('.menu');
+var burger = document.querySelector('.header__burger-icon');
+
+function toggleMenu() {
+  menu.classList.toggle('show-menu-mobile');
 }
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+function iconColor(icon) {
+  icon.classList.toggle('bg-pressed');
 }
 
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
+burger.addEventListener('click', function () {
+  toggleMenu();
+  iconColor(burger);
+});
+/* Handling search bar */
 
-function updateLink(link) {
-  var newLink = link.cloneNode();
+var searchBar = document.querySelector('.header__form-small');
+var searchIcon = document.querySelector('.header__search-icon');
 
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
+function toggleSearch() {
+  searchBar.classList.toggle('show-search-bar');
 }
 
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"scss/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+searchIcon.addEventListener('click', function () {
+  toggleSearch();
+  iconColor(searchIcon);
+});
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +378,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.77bb5cfd.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
+//# sourceMappingURL=/main.fb6bbcaf.js.map

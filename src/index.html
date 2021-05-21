@@ -45,21 +45,26 @@
       </div>
     </header>
     <main class="content">
-      <div class="menu">
-        <h3 class="menu__title title">Menu</h3>
-        <div class="menu__item active">
+      <ul class="menu">
+        <li class="menu__title title">Menu</li>
+        <li class="menu__item active">
           <div class="menu__icon">
             <img src="img/code-icon.svg" alt="icone código" />
           </div>
           <p class="menu__item-name">Editor de código</p>
-        </div>
-        <div class="menu__item">
+        </li>
+        <li class="menu__item">
           <div class="menu__icon comunidade">
             <img src="img/group-icon.svg" alt="icone código" />
           </div>
           <p class="menu__item-name">Comunidade</p>
-        </div>
-      </div>
+        </li>
+      </ul>
+
+      <form class="header__form header__form-small">
+        <input type="text" class="input search" placeholder="Busque por algo" />
+      </form>
+
       <div class="editor">
         <div class="editor__container">
           <textarea
@@ -110,13 +115,61 @@ const unfold = (f, seed) => {
         <div class="project__settings">
           <h3 class="title">Personalização</h3>
           <div class="project__customize">
-            <select class="project__select" name="lingua" id="lingua">
+            <!-- <select class="project__select" name="lingua" id="lingua">
               <option class="project__option" value="javascript">
                 Javascript
               </option>
               <option class="project__option" value="css">CSS</option>
               <option class="project__option" value="html">HTML</option>
-            </select>
+            </select> -->
+
+            <div class="project__select-group">
+              <button class="project__select-button" id="button">
+                <span id="select-label">Javascript</span>
+                <div class="project__select-arrow"></div>
+              </button>
+              <div id="dropdown" class="project__dropdown hidden">
+                <label
+                  for="select-javascript"
+                  class="project__select-item project__option"
+                  >Javascript</label
+                >
+                <input
+                  class="project__radio-option"
+                  id="select-javascript"
+                  type="radio"
+                  name="language"
+                  value="javascript"
+                />
+
+                <label
+                  for="select-html"
+                  class="project__select-item project__option"
+                  >HTML</label
+                >
+                <input
+                  class="project__radio-option"
+                  id="select-html"
+                  type="radio"
+                  name="language"
+                  value="html"
+                />
+
+                <label
+                  for="select-css"
+                  class="project__select-item project__option"
+                  >CSS</label
+                >
+                <input
+                  class="project__radio-option"
+                  id="select-css"
+                  type="radio"
+                  name="language"
+                  value="css"
+                />
+              </div>
+            </div>
+
             <input
               class="project__color-picker"
               type="color"
@@ -125,9 +178,11 @@ const unfold = (f, seed) => {
               value="#6bd1ff"
             />
           </div>
-          <button type="button" class="btn btn-light">Salvar projeto</button>
+          <input type="submit" class="btn btn-light" value="Salvar projeto" />
+          <!-- <button type="button" class="btn btn-light">Salvar projeto</button> -->
         </div>
       </div>
     </main>
+    <script src="js/main.js"></script>
   </body>
 </html>

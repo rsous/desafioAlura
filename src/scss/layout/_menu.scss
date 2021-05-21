@@ -3,6 +3,7 @@
 .menu {
   display: flex;
   flex-direction: column;
+  list-style: none;
   width: 20%;
 
   & > *:not(:last-child) {
@@ -50,8 +51,39 @@
   opacity: 1;
 }
 
+/* Animation for dropdown menu and search bar */
+
+@keyframes menuIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media only screen and (max-width: $bp-tablet) {
   .menu {
     display: none;
+    opacity: 0;
+    width: 100%;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+
+    &__item {
+      width: 188.28px;
+    }
+
+    &__icon {
+      margin-left: 1rem;
+    }
+  }
+
+  .show-menu-mobile {
+    display: flex;
+    opacity: 1;
+    animation: menuIn 0.8s ease-in-out;
   }
 }

@@ -42,16 +42,78 @@
     }
   }
 
+  &__select-group {
+    position: relative;
+  }
+
+  &__select-button {
+    color: $color-text-greyish;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-input-bg;
+    border: none;
+    border-radius: 8px;
+    font-family: $font-family;
+    font-size: $font-size-default;
+    padding: 1rem 1.5rem;
+    height: 5.6rem;
+    width: 100%;
+
+    &:hover {
+      background: $color-input-bg-hover;
+    }
+  }
+
+  &__select-arrow {
+    border: solid $color-text-greyish;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(45deg);
+  }
+
+  &__dropdown {
+    border: 2px solid #5875b4;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+  }
+
   &__option {
     background-color: rgba($color-primary, 0.8);
     border: none;
-    border-radius: 8px;
-    color: $color-text;
     outline: none;
     padding: 1rem;
 
     &:hover {
       background-color: $color-primary;
+    }
+  }
+
+  &__radio-option {
+    display: none;
+  }
+
+  &__select-item {
+    background: #5875b4;
+    color: $color-text-greyish;
+    font-size: $font-size-default;
+    padding: 1rem;
+
+    &:hover {
+      background: lightskyblue;
+
+      &:first-of-type {
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+      }
+
+      &:last-of-type {
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+      }
     }
   }
 
@@ -89,6 +151,14 @@
   }
 }
 
+#button {
+  margin-bottom: 0;
+}
+
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: $bp-tablet) {
   .project {
     margin-top: 5rem;
@@ -108,6 +178,10 @@
     &__color-picker {
       width: calc((100% / 2) - 1%);
     }
+
+    &__select-group {
+      width: calc((100% / 2) - 1%);
+    }
   }
 }
 
@@ -119,6 +193,10 @@
       & > *:first-child {
         margin-bottom: 2.5rem;
       }
+    }
+
+    &__select-group {
+      width: 100%;
     }
 
     &__settings .project__customize {
