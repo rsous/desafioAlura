@@ -100,7 +100,7 @@
     background: #5875b4;
     color: $color-text-greyish;
     font-size: $font-size-default;
-    padding: 1rem;
+    border: 6px solid #5875b4;
 
     &:hover {
       background: lightskyblue;
@@ -172,6 +172,10 @@
       & > *:first-child {
         margin-bottom: 0;
       }
+    }
+
+    &__select-item {
+      border: none;
     }
 
     &__select,

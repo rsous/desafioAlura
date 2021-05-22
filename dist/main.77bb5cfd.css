@@ -362,8 +362,10 @@ html {
 }
 .editor__code {
   background-color: #141414;
+  border: 1px solid #141414;
   border-top: 4rem solid #141414;
   border-radius: 8px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
   color: #fff;
   font-size: 1.4rem;
   font-family: "Roboto mono", monospace;
@@ -487,7 +489,7 @@ html {
   background: #5875b4;
   color: rgba(255, 255, 255, 0.64);
   font-size: 1.6rem;
-  padding: 1rem;
+  border: 6px solid #5875b4;
 }
 .project__select-item:hover {
   background: lightskyblue;
@@ -546,6 +548,9 @@ html {
   }
   .project__customize > *:first-child {
     margin-bottom: 0;
+  }
+  .project__select-item {
+    border: none;
   }
   .project__select, .project__color-picker {
     width: calc((100% / 2) - 1%);

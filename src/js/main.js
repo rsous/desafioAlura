@@ -81,8 +81,11 @@ function hideSearch() {
 /* Color picker */
 const colorPicker = document.querySelector('.project__color-picker');
 const editorBackground = document.querySelector('.editor__container');
-const saveButton = document.querySelector('.project__save');
 
-saveButton.addEventListener('click', function () {
-  editorBackground.style = `background:${colorPicker.value}`;
-});
+colorPicker.addEventListener(
+  'input',
+  function () {
+    editorBackground.style = `background:${colorPicker.value}`;
+  },
+  false
+);
