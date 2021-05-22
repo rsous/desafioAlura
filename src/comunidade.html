@@ -84,17 +84,17 @@
               class="editor__code comunidade__card-editor"
               disabled
             >
-  const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
   
-  const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
             
-  const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-      const res = f(seed)
-      return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-  }</textarea
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}</textarea
             >
             <img
               src="img/mac_buttons.svg"
@@ -105,7 +105,7 @@
           <div class="comunidade__card-info">
             <h3 class="comunidade__card-title">Título do projeto</h3>
             <p class="comunidade__card-description">
-              Essa é a descrição do meu projeto
+              Esta é a descrição do meu projeto.
             </p>
             <div class="card__interact">
               <div class="card__stats">
@@ -144,17 +144,19 @@
               class="editor__code comunidade__card-editor"
               disabled
             >
-  const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-  
-  const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+}
             
-  const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-      const res = f(seed)
-      return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-  }</textarea
+body {
+  min-height: 100vh;
+  background-color: #18181c;
+  display: flex;
+  align-items: center;
+}      
+  </textarea
             >
             <img
               src="img/mac_buttons.svg"
@@ -165,7 +167,7 @@
           <div class="comunidade__card-info">
             <h3 class="comunidade__card-title">Título do projeto</h3>
             <p class="comunidade__card-description">
-              Essa é a descrição do meu projeto
+              Esta é a descrição do meu projeto.
             </p>
             <div class="card__interact">
               <div class="card__stats">
@@ -204,18 +206,15 @@
               class="editor__code comunidade__card-editor"
               disabled
             >
-  const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-  
-  const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+let textureOldGoldURL = "https://assets.codepen.io/911157/matcapCop.jpg";
+let modelURL = "https://assets.codepen.io/911157/creativityDoodle_by_Anna_the_Scavenger.glb";
             
-  const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-      const res = f(seed)
-      return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-  }</textarea
-            >
+// LANDSCAPE / PORTRAIT
+            
+let isMobile = /(Android|iPhone|iOS|iPod|iPad)/i.test(navigator.userAgent);
+let windowRatio = window.innerWidth / window.innerHeight;
+let isLandscape = (windowRatio > 1) ? true : false;
+            </textarea>
             <img
               src="img/mac_buttons.svg"
               alt="botões"
@@ -225,7 +224,7 @@
           <div class="comunidade__card-info">
             <h3 class="comunidade__card-title">Título do projeto</h3>
             <p class="comunidade__card-description">
-              Essa é a descrição do meu projeto
+              Esta é a descrição do meu projeto.
             </p>
             <div class="card__interact">
               <div class="card__stats">
@@ -264,17 +263,20 @@
               class="editor__code comunidade__card-editor"
               disabled
             >
-  const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-  
-  const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-            
-  const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-      const res = f(seed)
-      return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-  }</textarea
+<!-- page heading -->
+<div class='container container-dark p-y-md'>
+  <div class='header-content'>
+    <h1>Material Search Animation</h1>
+    <h2>Usign CSS Transitions</h2>
+  </div>
+</div>
+
+
+<!-- page content + floating button -->
+<div class='container p-y-md'>
+  <div class='control'>
+    <div class='btn-material'></div>
+</textarea
             >
             <img
               src="img/mac_buttons.svg"
@@ -285,7 +287,7 @@
           <div class="comunidade__card-info">
             <h3 class="comunidade__card-title">Título do projeto</h3>
             <p class="comunidade__card-description">
-              Essa é a descrição do meu projeto
+              Esta é a descrição do meu projeto.
             </p>
             <div class="card__interact">
               <div class="card__stats">
