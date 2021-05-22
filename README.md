@@ -25,7 +25,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/rsous/desafioAlura">
-    <img src="img/Logo@2x.png" alt="Logo" width="80" height="80">
+    <img src="src/img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Alura Dev</h3>
