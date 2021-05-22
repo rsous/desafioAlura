@@ -657,13 +657,27 @@ html {
   display: flex;
   align-items: center;
   margin-right: 2rem;
+  padding: 0.8rem;
+}
+.card__stat:hover {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
 }
 .card__icon {
   margin-right: 0.8rem;
+  font-size: 2rem;
+}
+.card__icon-heart:active {
+  color: #f65151;
 }
 .card__user {
   display: flex;
   align-items: center;
+  padding: 0.8rem;
+}
+.card__user:hover, .card__user:active {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
 }
 .card__user-name {
   font-size: 1.6rem;
@@ -701,7 +715,7 @@ html {
   .editor__container {
     padding: 2rem;
   }
-  .editor__butons {
+  .editor__buttons {
     top: 3rem;
     left: 3rem;
   }
