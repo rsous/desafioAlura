@@ -194,6 +194,26 @@ html {
   right: 0;
 }
 
+@keyframes searchIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes searchOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+}
 @media only screen and (max-width: 48em) {
   .header__user {
     display: none;
@@ -223,13 +243,19 @@ html {
     height: 100%;
     width: 65%;
   }
-
-  .show-search-bar {
-    display: block;
-    opacity: 1;
-    animation: menuIn 0.8s ease-in-out;
-  }
 }
+.show-search-bar {
+  display: block;
+  opacity: 1;
+  animation: searchIn 0.3s ease-in-out;
+}
+
+.hide-search-bar {
+  display: block;
+  opacity: 0;
+  animation: searchOut 0.4s ease-in-out;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -277,11 +303,21 @@ html {
 @keyframes menuIn {
   0% {
     opacity: 0;
-    transform: translateY(-40%);
+    transform: translateX(40%);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+  }
+}
+@keyframes menuOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(40%);
   }
 }
 @media only screen and (max-width: 48em) {
@@ -302,7 +338,13 @@ html {
   .show-menu-mobile {
     display: flex;
     opacity: 1;
-    animation: menuIn 0.8s ease-in-out;
+    animation: menuIn 0.5s ease-in-out;
+  }
+
+  .hide-menu-mobile {
+    display: flex;
+    opacity: 0;
+    animation: menuOut 0.5s ease-in-out;
   }
 }
 .editor {

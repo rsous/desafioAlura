@@ -41,9 +41,19 @@ function iconColor(icon) {
 }
 
 burger.addEventListener('click', function () {
-  toggleMenu();
   iconColor(burger);
+
+  if (menu.classList.contains('show-menu-mobile')) {
+    menu.classList.toggle('hide-menu-mobile');
+    setTimeout(hideMenu, 300);
+  } else {
+    toggleMenu();
+  }
 });
+
+function hideMenu() {
+  menu.classList.toggle('hidden');
+}
 
 /* Handling search bar */
 const searchBar = document.querySelector('.header__form-small');
@@ -54,6 +64,16 @@ function toggleSearch() {
 }
 
 searchIcon.addEventListener('click', function () {
-  toggleSearch();
   iconColor(searchIcon);
+
+  if (searchBar.classList.contains('show-search-bar')) {
+    searchBar.classList.toggle('hide-search-bar');
+    setTimeout(hideSearch, 300);
+  } else {
+    toggleSearch();
+  }
 });
+
+function hideSearch() {
+  searchBar.classList.toggle('hidden');
+}

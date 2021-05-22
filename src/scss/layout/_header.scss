@@ -130,6 +130,28 @@
   }
 }
 
+@keyframes searchIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes searchOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+}
+
 @media only screen and (max-width: $bp-tablet) {
   .header {
     &__user {
@@ -169,10 +191,16 @@
       width: 65%;
     }
   }
+}
 
-  .show-search-bar {
-    display: block;
-    opacity: 1;
-    animation: menuIn 0.8s ease-in-out;
-  }
+.show-search-bar {
+  display: block;
+  opacity: 1;
+  animation: searchIn 0.3s ease-in-out;
+}
+
+.hide-search-bar {
+  display: block;
+  opacity: 0;
+  animation: searchOut 0.4s ease-in-out;
 }
