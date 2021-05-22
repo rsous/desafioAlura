@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura Dev</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scss/main.scss" />
+  </head>
+  <body class="body container">
+    <header class="header">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="img/Logo@3x.png" alt="logo" class="logo" />
+        </a>
+      </div>
+      <form class="header__form">
+        <input type="text" class="input search" placeholder="Busque por algo" />
+      </form>
+      <div class="header__user">
+        <div class="user">
+          <img src="img/user.png" alt="user-photo" class="user-photo" />
+          <h3 class="user-name">Harry</h3>
+        </div>
+      </div>
+      <div class="header__search-responsive">
+        <img
+          src="img/search-icon.svg"
+          alt="ícone de busca"
+          class="header__search-icon"
+        />
+      </div>
+      <div class="header__burger">
+        <img
+          src="img/menu-icon.svg"
+          alt="ícone menu"
+          class="header__burger-icon"
+        />
+      </div>
+    </header>
+    <main class="content comunidade__content">
+      <ul class="menu">
+        <li class="menu__title title">Menu</li>
+        <li class="menu__list-item">
+          <a href="index.html" class="menu__item active">
+            <div class="menu__icon">
+              <img src="img/code-icon.svg" alt="icone código" />
+            </div>
+            <p class="menu__item-name">Editor de código</p>
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="comunidade.html" class="menu__item">
+            <div class="menu__icon menu__icon-comunidade">
+              <img src="img/group-icon.svg" alt="icone código" />
+            </div>
+            <p class="menu__item-name">Comunidade</p>
+          </a>
+        </li>
+      </ul>
+
+      <form class="header__form header__form-small">
+        <input type="text" class="input search" placeholder="Busque por algo" />
+      </form>
+
+      <div class="comunidade">
+        <div class="comunidade__card">
+          <div
+            class="
+              editor__container editor__container-comunidade
+              comunidade-div1
+            "
+          >
+            <textarea
+              name="editor"
+              id="editor"
+              cols="30"
+              rows="15"
+              class="editor__code comunidade__card-editor"
+              disabled
+            >
+  const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+  
+  const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+            
+  const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+      const res = f(seed)
+      return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+  }</textarea
+            >
+            <img
+              src="img/mac_buttons.svg"
+              alt="botões"
+              class="editor__buttons"
+            />
+          </div>
+          <div class="comunidade__card-info">
+            <h3 class="comunidade__card-title">Título do projeto</h3>
+            <p class="comunidade__card-description">
+              Essa é a descrição do meu projeto
+            </p>
+            <div class="card__interact">
+              <div class="card__stats">
+                <div class="card__stat">
+                  <img
+                    src="img/icon-msg.svg"
+                    alt="ícone mensagem"
+                    class="card__icon"
+                  />
+                  <p class="card__comments-no">9</p>
+                </div>
+                <div class="card__stat">
+                  <img
+                    src="img/icon-like.svg"
+                    alt="ícone coração"
+                    class="card__icon"
+                  />
+                  <p class="card__likes-no">9</p>
+                </div>
+              </div>
+              <div class="card__user">
+                <img
+                  src="img/card-user-photo.png"
+                  alt="foto do usuário"
+                  class="card__user-pic"
+                />
+                <h4 class="card__user-name">@Harry</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comunidade__card">
+          <div
+            class="
+              editor__container editor__container-comunidade
+              comunidade-div2
+            "
+          >
+            <textarea
+              name="editor"
+              id="editor"
+              cols="30"
+              rows="15"
+              class="editor__code comunidade__card-editor"
+              disabled
+            >
+  const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+  
+  const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+            
+  const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+      const res = f(seed)
+      return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+  }</textarea
+            >
+            <img
+              src="img/mac_buttons.svg"
+              alt="botões"
+              class="editor__buttons"
+            />
+          </div>
+          <div class="comunidade__card-info">
+            <h3 class="comunidade__card-title">Título do projeto</h3>
+            <p class="comunidade__card-description">
+              Essa é a descrição do meu projeto
+            </p>
+            <div class="card__interact">
+              <div class="card__stats">
+                <div class="card__stat">
+                  <img
+                    src="img/icon-msg.svg"
+                    alt="ícone mensagem"
+                    class="card__icon"
+                  />
+                  <p class="card__comments-no">9</p>
+                </div>
+                <div class="card__stat">
+                  <img
+                    src="img/icon-like.svg"
+                    alt="ícone coração"
+                    class="card__icon"
+                  />
+                  <p class="card__likes-no">9</p>
+                </div>
+              </div>
+              <div class="card__user">
+                <img
+                  src="img/card-user-photo.png"
+                  alt="foto do usuário"
+                  class="card__user-pic"
+                />
+                <h4 class="card__user-name">@Harry</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comunidade__card">
+          <div
+            class="
+              editor__container editor__container-comunidade
+              comunidade-div3
+            "
+          >
+            <textarea
+              name="editor"
+              id="editor"
+              cols="30"
+              rows="15"
+              class="editor__code comunidade__card-editor"
+              disabled
+            >
+  const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+  
+  const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+            
+  const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+      const res = f(seed)
+      return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+  }</textarea
+            >
+            <img
+              src="img/mac_buttons.svg"
+              alt="botões"
+              class="editor__buttons"
+            />
+          </div>
+          <div class="comunidade__card-info">
+            <h3 class="comunidade__card-title">Título do projeto</h3>
+            <p class="comunidade__card-description">
+              Essa é a descrição do meu projeto
+            </p>
+            <div class="card__interact">
+              <div class="card__stats">
+                <div class="card__stat">
+                  <img
+                    src="img/icon-msg.svg"
+                    alt="ícone mensagem"
+                    class="card__icon"
+                  />
+                  <p class="card__comments-no">9</p>
+                </div>
+                <div class="card__stat">
+                  <img
+                    src="img/icon-like.svg"
+                    alt="ícone coração"
+                    class="card__icon"
+                  />
+                  <p class="card__likes-no">9</p>
+                </div>
+              </div>
+              <div class="card__user">
+                <img
+                  src="img/card-user-photo.png"
+                  alt="foto do usuário"
+                  class="card__user-pic"
+                />
+                <h4 class="card__user-name">@Harry</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comunidade__card">
+          <div
+            class="
+              editor__container editor__container-comunidade
+              comunidade-div4
+            "
+          >
+            <textarea
+              name="editor"
+              id="editor"
+              cols="30"
+              rows="15"
+              class="editor__code comunidade__card-editor"
+              disabled
+            >
+  const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+  
+  const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+            
+  const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+      const res = f(seed)
+      return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+  }</textarea
+            >
+            <img
+              src="img/mac_buttons.svg"
+              alt="botões"
+              class="editor__buttons"
+            />
+          </div>
+          <div class="comunidade__card-info">
+            <h3 class="comunidade__card-title">Título do projeto</h3>
+            <p class="comunidade__card-description">
+              Essa é a descrição do meu projeto
+            </p>
+            <div class="card__interact">
+              <div class="card__stats">
+                <div class="card__stat">
+                  <img
+                    src="img/icon-msg.svg"
+                    alt="ícone mensagem"
+                    class="card__icon"
+                  />
+                  <p class="card__comments-no">9</p>
+                </div>
+                <div class="card__stat">
+                  <img
+                    src="img/icon-like.svg"
+                    alt="ícone coração"
+                    class="card__icon"
+                  />
+                  <p class="card__likes-no">9</p>
+                </div>
+              </div>
+              <div class="card__user">
+                <img
+                  src="img/card-user-photo.png"
+                  alt="foto do usuário"
+                  class="card__user-pic"
+                />
+                <h4 class="card__user-name">@Harry</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/header.js"></script>
+  </body>
+</html>

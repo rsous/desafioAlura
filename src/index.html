@@ -15,7 +15,7 @@
   <body class="body container">
     <header class="header">
       <div class="header__logo">
-        <a href="#">
+        <a href="index.html">
           <img src="img/Logo@3x.png" alt="logo" class="logo" />
         </a>
       </div>
@@ -47,17 +47,21 @@
     <main class="content">
       <ul class="menu">
         <li class="menu__title title">Menu</li>
-        <li class="menu__item active">
-          <div class="menu__icon">
-            <img src="img/code-icon.svg" alt="icone código" />
-          </div>
-          <p class="menu__item-name">Editor de código</p>
+        <li class="menu__list-item">
+          <a href="index.html" class="menu__item active">
+            <div class="menu__icon">
+              <img src="img/code-icon.svg" alt="icone código" />
+            </div>
+            <p class="menu__item-name">Editor de código</p>
+          </a>
         </li>
-        <li class="menu__item">
-          <div class="menu__icon comunidade">
-            <img src="img/group-icon.svg" alt="icone código" />
-          </div>
-          <p class="menu__item-name">Comunidade</p>
+        <li class="menu__list-item">
+          <a href="comunidade.html" class="menu__item">
+            <div class="menu__icon menu__icon-comunidade">
+              <img src="img/group-icon.svg" alt="icone código" />
+            </div>
+            <p class="menu__item-name">Comunidade</p>
+          </a>
         </li>
       </ul>
 
@@ -187,6 +191,8 @@ const unfold = (f, seed) => {
         </div>
       </div>
     </main>
-    <script src="js/main.js"></script>
+    <script src="js/language-dropdown.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/color-picker.js"></script>
   </body>
 </html>

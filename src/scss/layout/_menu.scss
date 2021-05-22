@@ -19,14 +19,12 @@
   &__item {
     display: flex;
     align-items: center;
+    color: $color-text;
+    text-decoration: none;
 
     &-name {
       font-size: 1.6rem;
       opacity: 0.56;
-    }
-
-    &:hover {
-      cursor: pointer;
     }
 
     &:hover &-name {

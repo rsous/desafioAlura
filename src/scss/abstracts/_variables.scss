@@ -5,6 +5,8 @@ $color-text: #fff;
 $color-text-greyish: rgba(255, 255, 255, 0.64);
 $color-input-bg: rgba(255, 255, 255, 0.16);
 $color-input-bg-hover: rgba(255, 255, 255, 0.24);
+$color-card-description: rgba(255, 255, 255, 0.8);
+$color-card-info-background: rgba(0, 0, 0, 0.16);
 
 $color-btn-light-hover: #7ba4fc;
 $border-btn-light-pressed: 4px solid rgba(80, 129, 251, 0.72);
@@ -16,7 +18,9 @@ $font-size-default: 1.6rem;
 $font-family: 'Inter', sans-serif;
 $font-size-code: 1.4rem;
 $font-family-code: 'Roboto mono', monospace;
+$font-size-card-title: 2.1rem;
 
 // RESPONSIVE BREAKPOINTS
+$bp-laptop: 64em; // 1024px
 $bp-tablet: 48em; // 768px
 $bp-mobile: 37.5em; // 600px
