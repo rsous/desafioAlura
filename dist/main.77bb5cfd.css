@@ -378,11 +378,11 @@ html {
   width: 10px;
 }
 .editor__code::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(44, 44, 44, 0.9);
   border-radius: 8px;
 }
 .editor__code::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(29, 29, 29, 0.8);
   border-radius: 8px;
 }
 .editor__code::-webkit-scrollbar-thumb:hover {
