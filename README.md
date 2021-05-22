@@ -36,7 +36,7 @@
     <a href="https://github.com/rsous/desafioAlura"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://rsous.github.io/desafioalura/dist">View Demo</a>
+    <a href="https://rsous.github.io/desafioAlura/dist">View Demo</a>
     ·
     <a href="https://github.com/rsous/desafioAlura/issues">Report Bug</a>
     ·
