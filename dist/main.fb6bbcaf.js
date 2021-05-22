@@ -162,7 +162,7 @@ burger.addEventListener('click', function () {
 
   if (menu.classList.contains('show-menu-mobile')) {
     menu.classList.toggle('hide-menu-mobile');
-    setTimeout(hideMenu, 300);
+    setTimeout(hideMenu, 400);
   } else {
     toggleMenu();
   }
@@ -223,7 +223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45167" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44019" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

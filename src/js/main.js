@@ -45,7 +45,7 @@ burger.addEventListener('click', function () {
 
   if (menu.classList.contains('show-menu-mobile')) {
     menu.classList.toggle('hide-menu-mobile');
-    setTimeout(hideMenu, 300);
+    setTimeout(hideMenu, 400);
   } else {
     toggleMenu();
   }
