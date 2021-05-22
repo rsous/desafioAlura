@@ -60,7 +60,7 @@
 
 .card {
   &__interact {
-    display: flex;
+    display: none;
     justify-content: space-between;
     margin-top: 2rem;
   }
@@ -142,6 +142,10 @@
         font-size: $font-size-card-title;
       }
     }
+  }
+
+  .card__interact {
+    display: flex;
   }
 }
 
