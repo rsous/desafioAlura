@@ -77,3 +77,12 @@ searchIcon.addEventListener('click', function () {
 function hideSearch() {
   searchBar.classList.toggle('hidden');
 }
+
+/* Color picker */
+const colorPicker = document.querySelector('.project__color-picker');
+const editorBackground = document.querySelector('.editor__container');
+const saveButton = document.querySelector('.project__save');
+
+saveButton.addEventListener('click', function () {
+  editorBackground.style = `background:${colorPicker.value}`;
+});
