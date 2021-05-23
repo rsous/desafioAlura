@@ -136,7 +136,9 @@
         margin-bottom: 3rem;
       }
 
-      margin-bottom: 3rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
 
       &-title {
         font-size: $font-size-card-title;
