@@ -34,6 +34,33 @@
     &:hover .menu__icon {
       background: rgba($color-tertiary, 0.64);
     }
+
+    &-user {
+      border-top: 1px solid rgba(80, 129, 251, 0.24);
+      margin-top: 2rem;
+      padding: 3rem 0 1rem 1rem;
+
+      &-mobile {
+        display: flex;
+        align-items: center;
+        padding: 0.8rem;
+
+        &:hover,
+        &:active {
+          background: rgba(255, 255, 255, 0.08);
+          border-radius: 16px;
+        }
+
+        .user-name {
+          font-size: $font-size-default;
+          font-weight: 400;
+        }
+      }
+
+      .user-photo {
+        margin-right: 1rem;
+      }
+    }
   }
 
   &__icon {
