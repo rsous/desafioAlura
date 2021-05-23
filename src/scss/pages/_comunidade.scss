@@ -8,14 +8,7 @@
 
   &__card {
     width: 49%;
-
-    &:nth-child(1) {
-      margin-bottom: 10rem;
-    }
-
-    &:nth-child(2) {
-      margin-bottom: 10rem;
-    }
+    margin-bottom: 6rem;
 
     &-editor {
       width: 100%;
@@ -128,16 +121,10 @@
     &__card {
       width: 100%;
 
-      &:nth-child(1) {
-        margin-bottom: 3rem;
-      }
+      margin-bottom: 3rem;
 
-      &:nth-child(2) {
-        margin-bottom: 3rem;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 3rem;
+      &:last-child {
+        margin-bottom: 0;
       }
 
       &-title {
