@@ -72,7 +72,9 @@
 
 ## About The Project
 
-Project designed by the Alura team as part of their subscription programs and used in the first Front End Alura Challenge.
+This project is meant to showcase the results of my journey and small achievements in my programming journey.
+
+Project designed by the Alura team as part of their subscription programs and used in their first Front End Alura Challenge.
 
 ### Built With
 
@@ -107,8 +109,6 @@ To get a local copy up and running follow these simple steps.
 <!-- USAGE EXAMPLES -->
 
 ## Usage
-
-This project is meant to showcase the results of my journey and small achievements in my programming journey.
 
 To have access to the development environment:
 
