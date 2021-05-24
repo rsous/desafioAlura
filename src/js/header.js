@@ -21,6 +21,20 @@ burger.addEventListener('click', function () {
   }
 });
 
+if (window.addEventListener) {
+  window.addEventListener(
+    'resize',
+    function () {
+      if (screen.width > 768) {
+        menu.classList.remove('hidden');
+        menu.classList.remove('show-menu-mobile');
+        menu.classList.remove('hide-menu-mobile');
+      }
+    },
+    true
+  );
+}
+
 function hideMenu() {
   menu.classList.toggle('hidden');
 }
