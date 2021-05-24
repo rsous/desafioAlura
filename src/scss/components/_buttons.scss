@@ -52,14 +52,15 @@
 }
 
 .icon-btn {
+  font-size: 2rem;
+  vertical-align: center;
+}
+
+.icon-btn {
   &:active,
   &:focus,
   &:focus-visible {
     background: $color-icon-btn-pressed;
     outline: none;
-  }
-
-  &:hover {
-    background-color: $color-icon-btn-hover;
   }
 }

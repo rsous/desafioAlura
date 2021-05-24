@@ -11,6 +11,9 @@ function iconColor(icon) {
 }
 
 burger.addEventListener('click', function () {
+  burger.classList.toggle('fa-bars');
+  burger.classList.toggle('fa-times');
+
   iconColor(burger);
 
   if (menu.classList.contains('show-menu-mobile')) {
