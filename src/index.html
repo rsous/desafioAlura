@@ -32,14 +32,14 @@
         <img
           src="img/search-icon.svg"
           alt="ícone de busca"
-          class="header__search-icon"
+          class="header__search-icon icon-btn"
         />
       </div>
       <div class="header__burger">
         <img
           src="img/menu-icon.svg"
           alt="ícone menu"
-          class="header__burger-icon"
+          class="header__burger-icon icon-btn"
         />
       </div>
     </header>
@@ -64,7 +64,7 @@
         </li>
         <li class="menu__list-item">
           <a href="#" class="menu__item menu__item-user">
-            <div class="menu__item-user-mobile">
+            <div class="menu__item-user-mobile icon-btn">
               <img src="img/user.png" alt="user-photo" class="user-photo" />
               <h3 class="user-name">Harry</h3>
             </div>
@@ -78,31 +78,32 @@
 
       <div class="editor">
         <div class="editor__container">
-          <textarea
-            name="editor"
-            id="editor"
-            cols="30"
-            rows="15"
-            class="editor__code"
-          >
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+          <div class="editor__area">
+            <pre>
+              <code class="preview editor__code" contenteditable="true">
+const pluckDeep = key => obj 
+=> key.split('.').reduce((accum, key) => accum[key], obj)
 
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-          
+const compose = (...fns) => res => fns.reduce((accum, next)
+=> next(accum), res)
+                          
 const unfold = (f, seed) => {
   const go = (f, seed, acc) => {
     const res = f(seed)
     return res ? go(f, res[1], acc.concat([res[0]])) : acc
   }
   return go(f, seed, [])
-}</textarea
-          >
+}       
+              </code>
+            </pre>
+          </div>
           <img src="img/mac_buttons.svg" alt="botões" class="editor__buttons" />
         </div>
-        <button class="btn btn-dark" type="button">
+        <button class="btn btn-dark btn-highlight" type="button">
           Visualizar com o highlight
         </button>
       </div>
+
       <div class="project">
         <div class="project__info">
           <h3 class="title">Seu projeto</h3>
@@ -189,8 +190,10 @@ const unfold = (f, seed) => {
         </div>
       </div>
     </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script src="js/language-dropdown.js"></script>
     <script src="js/header.js"></script>
     <script src="js/color-picker.js"></script>
+    <script src="js/editor.js"></script>
   </body>
 </html>

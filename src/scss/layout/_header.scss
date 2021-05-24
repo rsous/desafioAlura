@@ -89,12 +89,7 @@
 
     &-icon {
       padding: 1.5rem;
-
-      &:active,
-      &:focus {
-        background: $color-icon-btn-pressed;
-        border-radius: 16px;
-      }
+      border-radius: 16px;
     }
   }
 }

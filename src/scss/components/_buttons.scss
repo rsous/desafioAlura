@@ -14,11 +14,18 @@
 
 .btn-dark {
   &:hover {
-    background: rgba($color-tertiary, 0.16);
+    background-color: $color-btn-dark-active-hover;
     cursor: pointer;
   }
 
+  &:focus-visible,
+  &:focus {
+    background-color: $color-btn-dark-focus;
+    outline: none;
+  }
+
   &:active {
+    background-color: $color-btn-dark-active-hover;
     border: $border-btn-dark-pressed;
   }
 }
@@ -34,5 +41,25 @@
 
   &:active {
     border: $border-btn-light-pressed;
+    background-color: #7ba4fc;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $color-btn-light-focus;
+    outline: none;
+  }
+}
+
+.icon-btn {
+  &:active,
+  &:focus,
+  &:focus-visible {
+    background: $color-icon-btn-pressed;
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $color-icon-btn-hover;
   }
 }
