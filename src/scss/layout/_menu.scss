@@ -37,6 +37,7 @@
 
     &-user {
       border-top: 1px solid rgba(80, 129, 251, 0.24);
+      display: none;
       margin-top: 2rem;
       padding: 3rem 0 1rem 1rem;
 
@@ -110,6 +111,10 @@
 
     &__item {
       width: 188.28px;
+
+      &-user {
+        display: flex;
+      }
     }
 
     &__icon {
