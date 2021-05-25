@@ -11,8 +11,9 @@
     margin-bottom: 6rem;
 
     &-editor {
+      border-top: 4rem solid #141414;
       border-radius: 8px;
-      padding: 4rem 2rem 2rem;
+      padding: 0rem 2rem 2rem;
       resize: none;
       width: 100%;
     }
@@ -81,8 +82,14 @@
     margin-right: 0.8rem;
     font-size: 2rem;
 
-    &-heart:active {
-      color: #f65151;
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-heart {
+      &:active {
+        color: #f65151;
+      }
     }
   }
 
@@ -95,6 +102,10 @@
     &:active {
       border-radius: 16px;
       background: rgba(255, 255, 255, 0.08);
+    }
+
+    &:hover {
+      cursor: pointer;
     }
 
     &-name {
@@ -150,6 +161,14 @@
     &__buttons {
       top: 3rem;
       left: 3rem;
+    }
+  }
+
+  .comunidade {
+    &__card {
+      &-editor {
+        border-top: 3rem solid #141414;
+      }
     }
   }
 }

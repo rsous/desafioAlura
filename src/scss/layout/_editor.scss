@@ -70,3 +70,11 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-width: $bp-mobile) {
+  .editor {
+    &__area {
+      border-top: 3rem solid #141414;
+    }
+  }
+}

@@ -63,4 +63,8 @@
     background: $color-icon-btn-pressed;
     outline: none;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
