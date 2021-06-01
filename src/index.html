@@ -71,19 +71,19 @@
       <div class="editor">
         <div class="editor__container">
           <div class="editor__area">
-            <pre><code class="preview editor__code" contenteditable="true">const pluckDeep = key => obj 
-=> key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next)
-=> next(accum), res)
-                          
-const unfold = (f, seed) => {
-  const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+            <pre><code class="preview editor__code" contenteditable="true">function by(propName) {
+return function(a, b) {
+    return a[propName] - b[propName];
   }
-  return go(f, seed, [])
-}       
+}
+          
+const person1 = {name: 'joe', height: 72};
+const person2 = {name: 'rob', height: 70};
+const person3 = {name: 'nicholas', height: 66};
+          
+const arr_ = [person1, person2, person3];
+          
+const arr_sorted = arr_.sort(by('height'));   
               </code>
             </pre>
           </div>
@@ -184,13 +184,10 @@ const unfold = (f, seed) => {
       src="https://kit.fontawesome.com/c9844b61d3.js"
       crossorigin="anonymous"
     ></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script src="js/language-dropdown.js"></script>
     <script src="js/header.js"></script>
     <script src="js/color-picker.js"></script>
-    <script>
-      hljs.highlightAll();
-    </script>
     <script src="js/editor.js"></script>
   </body>
 </html>

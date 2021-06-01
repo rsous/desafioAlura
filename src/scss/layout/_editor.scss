@@ -29,6 +29,7 @@
     font-size: $font-size-code;
     font-family: $font-family-code;
     width: 100%;
+    white-space: pre-wrap;
 
     &:focus {
       outline: none;

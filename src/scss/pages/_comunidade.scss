@@ -57,7 +57,7 @@
 
 .card {
   &__interact {
-    display: none;
+    display: flex;
     justify-content: space-between;
     margin-top: 2rem;
   }
@@ -145,10 +145,6 @@
         font-size: $font-size-card-title;
       }
     }
-  }
-
-  .card__interact {
-    display: flex;
   }
 }
 
