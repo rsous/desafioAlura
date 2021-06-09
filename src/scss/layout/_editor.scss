@@ -65,6 +65,25 @@
   }
 }
 
+.export {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  &__title {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: lighter;
+  }
+
+  & > * {
+    width: calc((100% / 2) - 1%);
+  }
+}
+
 @media only screen and (max-width: $bp-tablet) {
   .editor {
     margin: 0;
@@ -76,6 +95,18 @@
   .editor {
     &__area {
       border-top: 3rem solid #141414;
+    }
+  }
+
+  .export {
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+
+      &:last-child {
+        margin-top: 2rem;
+      }
     }
   }
 }

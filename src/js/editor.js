@@ -2,6 +2,7 @@ const editor = document.querySelector('.editor__code');
 const btn = document.querySelector('.btn-highlight');
 const btnSave = document.querySelector('.project__save');
 
+hljs.highlightAll();
 
 btn.addEventListener('click', function () {
   hljs.highlightAll();

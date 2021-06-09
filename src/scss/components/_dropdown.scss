@@ -1,0 +1,46 @@
+@use 'abstracts' as *;
+
+.dropdown {
+  border: 2px solid #5875b4;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+
+  &__option {
+    background-color: rgba($color-primary, 0.8);
+    border: none;
+    outline: none;
+    padding: 1rem;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+}
+
+.select-item {
+  background: #5875b4;
+  color: $color-text-greyish;
+  font-size: $font-size-default;
+  border: 6px solid #5875b4;
+
+  &:hover {
+    background: lightskyblue;
+
+    &:first-of-type {
+      border-top-left-radius: 0.8rem;
+      border-top-right-radius: 0.8rem;
+    }
+
+    &:last-of-type {
+      border-bottom-left-radius: 0.8rem;
+      border-bottom-right-radius: 0.8rem;
+    }
+  }
+}
+
+.radio-option {
+  display: none;
+}

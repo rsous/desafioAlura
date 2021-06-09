@@ -15,6 +15,7 @@ function toggleHidden() {
 
 options.forEach(function (option) {
   option.addEventListener('click', function (e) {
+    console.log('clicked option');
     setSelectTitle(e);
   });
 });

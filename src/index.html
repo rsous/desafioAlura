@@ -92,6 +92,52 @@ const arr_sorted = arr_.sort(by('height'));
         <button class="btn btn-dark btn-highlight" type="button">
           Visualizar com o highlight
         </button>
+        <h3 class="title export__title">Exportar como imagem</h3>
+        <div class="export">
+          <div class="project__select-group">
+            <button class="project__select-button" id="btnExt">
+              <span id="select-ext">Extension</span>
+              <div class="project__select-arrow"></div>
+            </button>
+            <div id="dropdownExt" class="dropdown hidden">
+              <label for="select-jpeg" class="select-item dropdown__option"
+                >JPEG</label
+              >
+              <input
+                class="radio-option ext-option"
+                id="select-jpeg"
+                type="radio"
+                name="extension"
+                value="jpeg"
+              />
+
+              <label for="select-png" class="select-item dropdown__option"
+                >PNG</label
+              >
+              <input
+                class="radio-option ext-option"
+                id="select-png"
+                type="radio"
+                name="extension"
+                value="png"
+              />
+
+              <label for="select-svg" class="select-item dropdown__option"
+                >SVG</label
+              >
+              <input
+                class="radio-option ext-option"
+                id="select-svg"
+                type="radio"
+                name="extension"
+                value="svg"
+              />
+            </div>
+          </div>
+          <button class="btn btn-dark btn-export" type="button">
+            Exportar
+          </button>
+        </div>
       </div>
 
       <div class="project">
@@ -186,8 +232,10 @@ const arr_sorted = arr_.sort(by('height'));
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script src="js/language-dropdown.js"></script>
+    <script src="js/exportCode.js"></script>
     <script src="js/header.js"></script>
     <script src="js/color-picker.js"></script>
     <script src="js/editor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/src/dom-to-image.min.js"></script>
   </body>
 </html>
